@@ -1,0 +1,271 @@
+/* Responsive Styles */
+
+/* Large Desktops (≥1200px) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Medium Desktops (≥992px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-title {
+        font-size: 3.8rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* Tablets and Small Desktops (≥768px and <992px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .hero-title {
+        font-size: 3.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .skills-telemetry {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablets and Large Phones (≥576px and <768px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .navbar-links {
+        display: none;
+    }
+    
+    .navbar-toggle {
+        display: block;
+    }
+    
+    .navbar.active .navbar-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-bg);
+        padding: 1.5rem;
+        border-radius: 0 0 10px 10px;
+        box-shadow: var(--shadow-md);
+        z-index: 10;
+    }
+    
+    .navbar.active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    
+    .navbar.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .navbar.active .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .experience-cards,
+    .projects-grid,
+    .achievements-cards,
+    .certifications-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .skills-telemetry {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+    }
+}
+
+/* Small Phones (<576px) */
+@media (max-width: 575px) {
+    .container {
+        width: 100%;
+        padding: 0 1.2rem;
+    }
+    
+    .navbar-links {
+        display: none;
+    }
+    
+    .navbar-toggle {
+        display: block;
+    }
+    
+    .navbar.active .navbar-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-bg);
+        padding: 1.5rem;
+        border-radius: 0 0 10px 10px;
+        box-shadow: var(--shadow-md);
+        z-index: 10;
+    }
+    
+    .navbar.active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    
+    .navbar.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .navbar.active .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    
+    .hero {
+        padding-top: 4rem;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-detail {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-detail i {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .experience-cards,
+    .projects-grid,
+    .achievements-cards,
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-telemetry {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+    }
+    
+    .achievement-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .achievement-icon {
+        margin-bottom: 1rem;
+    }
+    
+    .projects-filter {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-icon {
+        margin-bottom: 1rem;
+    }
+    
+    .footer-content {
+        text-align: center;
+    }
+}
+
+

@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitya Jhaveri | Computer Science & Economics</title>
+    <meta name="description" content="Portfolio of Nitya Jhaveri, Computer Science & Economics student at Purdue University, showcasing projects and experience in data science, finance, and systems programming.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@200;300;400&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="loading">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-spinner"></div>
+            <div class="preloader-text">Loading</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">NJ</div>
+            <ul class="navbar-links">
+                <li><a href="#about" class="navbar-link">About</a></li>
+                <li><a href="#experience" class="navbar-link">Experience</a></li>
+                <li><a href="#projects" class="navbar-link">Projects</a></li>
+                <li><a href="#skills" class="navbar-link">Skills</a></li>
+                <li><a href="#achievements" class="navbar-link">Achievements</a></li>
+                <li><a href="#contact" class="navbar-link">Contact</a></li>
+            </ul>
+            <div class="navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <canvas id="hero-canvas"></canvas>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-text">Computer Science + Economics Purdue '27</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Where algorithms</span>
+                    <span class="hero-title-line">meet business</span>
+                    <span class="hero-title-line">strategy.</span>
+                </h1>
+                <p class="hero-description">CS & Economics student at Purdue. Building at the intersection of data science, financial modeling, and full-stack engineering. Currently exploring Formula 1 strategy and financial algorithms.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary btn-interactive">
+                        <span class="btn-text">View my work</span>
+                        <div class="btn-hover-content">
+                            <span>View my work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-interactive">
+                        <span class="btn-text">Get in touch</span>
+                        <div class="btn-hover-content">
+                            <span>Get in touch</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    <a href="https://drive.google.com/uc?export=download&id=1DFqtwEshFofSKiVTMA2ZvQz20uzu3YX1" download class="btn btn-outline btn-interactive" target="_blank">
+                        <span class="btn-text"><i class="fas fa-download"></i> Download Resume</span>
+                        <div class="btn-hover-content">
+                            <span><i class="fas fa-download"></i> Download Resume</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="hero-skills">
+                    <div class="hero-skill-item">
+                        <span class="hero-skill-dot"></span>
+                        <span>Data Science</span>
+                    </div>
+                    <div class="hero-skill-item">
+                        <span class="hero-skill-dot"></span>
+                        <span>Financial Modeling</span>
+                    </div>
+                    <div class="hero-skill-item">
+                        <span class="hero-skill-dot"></span>
+                        <span>Systems Programming</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">My background and interests</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>As a Computer Science and Economics double major at Purdue University, I am deeply invested in exploring the intersection of technology and business. My academic and professional pursuits are centered around leveraging technical expertise to create innovative solutions that drive strategic business growth and optimize economic outcomes.</p>
+                    <p>With a keen interest in how data science, machine learning, and emerging technologies can revolutionize business processes, I focus on contributing to projects that blend technological innovation with economic insights. I aim to enhance decision-making and deliver measurable value in a rapidly evolving digital landscape.</p>
+                    <p>My long-term vision is to take on leadership roles where I can guide the integration of cutting-edge technologies into business and economic frameworks, shaping the future of industries through thoughtful, data-driven strategies.</p>
+                </div>
+                <div class="about-details">
+                    <div class="about-detail">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="about-detail-text">
+                            <h3>Education</h3>
+                            <p>Purdue University<br>B.S. Computer Science & Economics<br>Expected May 2027</p>
+                        </div>
+                    </div>
+                    <div class="about-detail">
+                        <i class="fas fa-code"></i>
+                        <div class="about-detail-text">
+                            <h3>Focus Areas</h3>
+                            <p>Data Science, Financial Modeling,<br>Systems Programming, Economic Analysis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">Professional journey and roles</p>
+            </div>
+            <div class="experience-cards">
+                <!-- Experience Card 1 -->
+                <div class="experience-card" data-experience="cygnet">
+                    <div class="experience-card-header">
+                        <h3 class="experience-title">Data Science & Software Engineering Intern</h3>
+                        <p class="experience-company">Cygnet.One</p>
+                        <p class="experience-duration">June 2025 - July 2025</p>
+                    </div>
+                    <div class="experience-card-content">
+                        <ul class="experience-points">
+                            <li>Migrated legacy ASPX modules to ASP.NET MVC</li>
+                            <li>Developed delivery status and KPI dashboards</li>
+                            <li>Integrated C# controllers with SQL stored procedures</li>
+                        </ul>
+                        <button class="btn btn-outline btn-interactive experience-details-btn">
+                            <span class="btn-text">Learn More</span>
+                            <div class="btn-hover-content">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="experience-card" data-experience="datamine">
+                    <div class="experience-card-header">
+                        <h3 class="experience-title">Project Assistant</h3>
+                        <p class="experience-company">The Data Mine, Purdue University</p>
+                        <p class="experience-duration">Aug 2024 - May 2025</p>
+                    </div>
+                    <div class="experience-card-content">
+                        <ul class="experience-points">
+                            <li>Enhanced customer segmentation and predictive modeling</li>
+                            <li>Streamlined 80+ features to ~20 and applied clustering algorithms</li>
+                            <li>Used Python, R, and Tableau for data analysis</li>
+                        </ul>
+                        <button class="btn btn-outline btn-interactive experience-details-btn">
+                            <span class="btn-text">Learn More</span>
+                            <div class="btn-hover-content">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Experience Card 3 -->
+                <div class="experience-card" data-experience="teaching">
+                    <div class="experience-card-header">
+                        <h3 class="experience-title">Teaching Assistant - ECON 252</h3>
+                        <p class="experience-company">Purdue University</p>
+                        <p class="experience-duration">Aug 2025 - Present</p>
+                    </div>
+                    <div class="experience-card-content">
+                        <ul class="experience-points">
+                            <li>Assist with lectures, hold weekly office hours to help students, grade assignments</li>
+                            <li>Support students in understanding key macroeconomic concepts</li>
+                            <li>Develop supplemental educational materials</li>
+                        </ul>
+                        <button class="btn btn-outline btn-interactive experience-details-btn">
+                            <span class="btn-text">Learn More</span>
+                            <div class="btn-hover-content">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Experience Card 4 -->
+                <div class="experience-card" data-experience="f1purdue">
+                    <div class="experience-card-header">
+                        <h3 class="experience-title">Treasurer</h3>
+                        <p class="experience-company">F1@Purdue</p>
+                        <p class="experience-duration">May 2025 - Present</p>
+                    </div>
+                    <div class="experience-card-content">
+                        <ul class="experience-points">
+                            <li>Manage budget planning, expense tracking, and fund allocation</li>
+                            <li>Lead fundraising efforts and grant applications</li>
+                            <li>Collaborate with executive board on financial strategy</li>
+                        </ul>
+                        <button class="btn btn-outline btn-interactive experience-details-btn">
+                            <span class="btn-text">Learn More</span>
+                            <div class="btn-hover-content">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Experience Card 5 -->
+                <div class="experience-card" data-experience="tutor">
+                    <div class="experience-card-header">
+                        <h3 class="experience-title">Tutor</h3>
+                        <p class="experience-company">Shyam Sir Classes, Ahmedabad, India</p>
+                        <p class="experience-duration">June 2023 - July 2023</p>
+                    </div>
+                    <div class="experience-card-content">
+                        <ul class="experience-points">
+                            <li>Led a class of 30 students achieving a 100% pass rate in Java assessments</li>
+                            <li>Customized teaching approaches for diverse learning styles</li>
+                            <li>Recognized for simplifying complex concepts and creating a supportive environment</li>
+                        </ul>
+                        <button class="btn btn-outline btn-interactive experience-details-btn">
+                            <span class="btn-text">Learn More</span>
+                            <div class="btn-hover-content">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Detail Modal -->
+    <div class="modal experience-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Experience Details</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-content">
+                <!-- Content will be dynamically populated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">Selected technical work across data, finance, and systems</p>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="data-science">Data Science</button>
+                <button class="filter-btn" data-filter="finance">Finance</button>
+                <button class="filter-btn" data-filter="systems">Systems</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card" data-category="data-science">
+                    <div class="project-img">
+                        <img src="assets/images/f1-project.jpg" alt="F1 Undercut Strategy Analysis">
+                        <div class="project-img-overlay">
+                            <div class="project-tags">
+                                <span class="project-tag">Data Science</span>
+                                <span class="project-tag">F1</span>
+                                <span class="project-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">F1 Undercut Strategy Analysis</h3>
+                        <p class="project-description">Comprehensive F1 undercut analysis with 9 publication-quality visualizations including lap time distributions, pit timelines, stint degradation, success breakdowns, and strategic heatmaps. Built with FastF1 API, pandas, and matplotlib.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Nityaj22/AI_ML_Projects/tree/main/f1_undercut" target="_blank" class="btn btn-sm btn-outline btn-interactive">
+                                <span class="btn-text"><i class="fab fa-github"></i> GitHub</span>
+                                <div class="btn-hover-content">
+                                    <span><i class="fab fa-github"></i> GitHub</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+                            <button class="btn btn-sm btn-interactive project-details-btn">
+                                <span class="btn-text">Details</span>
+                                <div class="btn-hover-content">
+                                    <span>Details</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card" data-category="data-science finance">
+                    <div class="project-img">
+                        <img src="assets/images/monte-carlo-project.jpg" alt="Monte Carlo Portfolio Simulation">
+                        <div class="project-img-overlay">
+                            <div class="project-tags">
+                                <span class="project-tag">Finance</span>
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Simulation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Monte Carlo Portfolio Simulation</h3>
+                        <p class="project-description">Simulates 1,000+ portfolio paths using GBM with real data via yfinance. Computes VaR, drawdowns, and probability distributions for risk analysis.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Nityaj22/AI_ML_Projects/tree/main/Monte_Carlo_Models" target="_blank" class="btn btn-sm btn-outline btn-interactive">
+                                <span class="btn-text"><i class="fab fa-github"></i> GitHub</span>
+                                <div class="btn-hover-content">
+                                    <span><i class="fab fa-github"></i> GitHub</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+                            <button class="btn btn-sm btn-interactive project-details-btn">
+                                <span class="btn-text">Details</span>
+                                <div class="btn-hover-content">
+                                    <span>Details</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card" data-category="systems">
+                    <div class="project-img">
+                        <img src="assets/images/shell-project.jpg" alt="Custom Unix Shell">
+                        <div class="project-img-overlay">
+                            <div class="project-tags">
+                                <span class="project-tag">Systems</span>
+                                <span class="project-tag">C/C++</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Custom Unix Shell</h3>
+                        <p class="project-description">A full-featured Unix shell supporting pipelines, I/O redirection, signal handling, and interactive line editing with history and autocomplete.</p>
+                        <div class="project-links">
+                            <button class="btn btn-sm btn-interactive project-details-btn">
+                                <span class="btn-text">Details</span>
+                                <div class="btn-hover-content">
+                                    <span>Details</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card" data-category="systems">
+                    <div class="project-img">
+                        <img src="assets/images/kra-kpi-project.jpg" alt="KRA-KPI Management Platform">
+                        <div class="project-img-overlay">
+                            <div class="project-tags">
+                                <span class="project-tag">Web Development</span>
+                                <span class="project-tag">MVC</span>
+                                <span class="project-tag">HTML/CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">KRA-KPI Management Platform</h3>
+                        <p class="project-description">Built a comprehensive KRA-KPI management platform using HTML and MVC architecture, featuring separate interfaces for HR, managers, and employees to track and manage performance metrics.</p>
+                        <div class="project-links">
+                            <button class="btn btn-sm btn-interactive project-details-btn">
+                                <span class="btn-text">Details</span>
+                                <div class="btn-hover-content">
+                                    <span>Details</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="project-card" data-category="data-science">
+                    <div class="project-img">
+                        <img src="assets/images/dashboard-project.jpg" alt="AgReliant Genetics Customer Segmentation">
+                        <div class="project-img-overlay">
+                            <div class="project-tags">
+                                <span class="project-tag">Machine Learning</span>
+                                <span class="project-tag">K-means</span>
+                                <span class="project-tag">Clustering</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AgReliant Genetics Customer Segmentation</h3>
+                        <p class="project-description">Developed customer segmentation models using K-means and other clustering algorithms, utilizing silhouette score and other evaluation metrics to identify patterns and optimize clustering performance during The Data Mine project.</p>
+                        <div class="project-links">
+                            <button class="btn btn-sm btn-interactive project-details-btn">
+                                <span class="btn-text">Details</span>
+                                <div class="btn-hover-content">
+                                    <span>Details</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Detail Modal -->
+    <div class="modal project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Project Details</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-content">
+                <!-- Content will be dynamically populated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills</h2>
+                <p class="section-subtitle">Core technical strengths and tools I use</p>
+            </div>
+            <div class="skills-display">
+                <div class="skills-grid">
+                    <div class="skills-category-box">
+                        <h3 class="skills-category-title">Languages</h3>
+                        <div class="skills-pills">
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">Java</span>
+                            <span class="skill-pill">C++</span>
+                            <span class="skill-pill">C#</span>
+                            <span class="skill-pill">SQL</span>
+                            <span class="skill-pill">JavaScript</span>
+                            <span class="skill-pill">HTML/CSS</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category-box">
+                        <h3 class="skills-category-title">Data Science</h3>
+                        <div class="skills-pills">
+                            <span class="skill-pill">pandas</span>
+                            <span class="skill-pill">scikit-learn</span>
+                            <span class="skill-pill">matplotlib</span>
+                            <span class="skill-pill">ARIMA</span>
+                            <span class="skill-pill">Time Series Analysis</span>
+                            <span class="skill-pill">Clustering</span>
+                            <span class="skill-pill">Forecasting Algorithms</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category-box">
+                        <h3 class="skills-category-title">Web Development</h3>
+                        <div class="skills-pills">
+                            <span class="skill-pill">ASP.NET MVC</span>
+                            <span class="skill-pill">HTML</span>
+                            <span class="skill-pill">CSS</span>
+                            <span class="skill-pill">JavaScript</span>
+                            <span class="skill-pill">Bootstrap</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category-box">
+                        <h3 class="skills-category-title">Finance & Analytics</h3>
+                        <div class="skills-pills">
+                            <span class="skill-pill">Monte Carlo Simulation</span>
+                            <span class="skill-pill">GBM</span>
+                            <span class="skill-pill">Risk Analysis</span>
+                            <span class="skill-pill">Econometrics</span>
+                            <span class="skill-pill">Statistical Modeling</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category-box">
+                        <h3 class="skills-category-title">Database & BI</h3>
+                        <div class="skills-pills">
+                            <span class="skill-pill">SQL Server</span>
+                            <span class="skill-pill">SPSS</span>
+                            <span class="skill-pill">Stata</span>
+                            <span class="skill-pill">Tableau</span>
+                            <span class="skill-pill">Power BI</span>
+                            <span class="skill-pill">Data Visualization</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category-box">
+                        <h3 class="skills-category-title">Systems</h3>
+                        <div class="skills-pills">
+                            <span class="skill-pill">Unix/Linux</span>
+                            <span class="skill-pill">Process Management</span>
+                            <span class="skill-pill">Signal Handling</span>
+                            <span class="skill-pill">Shell Scripting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-subtitle">Selected accomplishments and recognitions</p>
+            </div>
+            <div class="achievements-cards">
+                <div class="achievement-card expandable-achievement">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-header">
+                            <h3 class="achievement-title">Federal Reserve Challenge Team Member (2025)</h3>
+                            <button class="achievement-expand-btn">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <ul class="achievement-points">
+                            <li>Selected to represent Purdue University in prestigious monetary policy competition</li>
+                            <li>Developed comprehensive economic analysis and policy recommendations</li>
+                            <li>Prepared for and excelled in rigorous Q&A sessions with Federal Reserve economists</li>
+                        </ul>
+                        <div class="achievement-expanded-content">
+                            <h4 class="achievement-subtitle">Competition Overview</h4>
+                            <p>Selected to represent Purdue University in a prestigious monetary policy competition designed to test participants' understanding of macroeconomic principles and Federal Reserve operations.</p>
+                            <h4 class="achievement-subtitle">Key Accomplishments</h4>
+                            <ul class="achievement-points">
+                                <li>Analyzed current economic conditions and created comprehensive forecasts</li>
+                                <li>Developed detailed policy recommendations for Federal Reserve panel</li>
+                                <li>Prepared for and excelled in rigorous Q&A sessions with Federal Reserve economists</li>
+                                <li>Demonstrated deep understanding of monetary policy implementation</li>
+                            </ul>
+                            <h4 class="achievement-subtitle">Skills Applied</h4>
+                            <p>Economic data analysis, forecasting, monetary theory, policy formulation, presentation skills</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Moonshot Pitch Competition Finalist (2025)</h3>
+                        <ul class="achievement-points">
+                            <li>Reached final round among 20+ teams university-wide</li>
+                            <li>Developed and pitched innovative market analysis platform</li>
+                            <li>Recognized by VCs and industry experts for technical feasibility</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="achievement-card expandable-achievement">
+                    <div class="achievement-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-header">
+                            <h3 class="achievement-title">IMC Prosperity Trading Challenge - Top 200 Teams (2023)</h3>
+                            <button class="achievement-expand-btn">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <ul class="achievement-points">
+                            <li>Placed in top 200 out of 600+ teams (12,000+ participants)</li>
+                            <li>Developed algorithmic trading strategies in Python</li>
+                            <li>Demonstrated practical application of financial theory</li>
+                        </ul>
+                        <div class="achievement-expanded-content">
+                            <h4 class="achievement-subtitle">Competition Overview</h4>
+                            <p>A prestigious 15-day global trading simulation challenge hosted by IMC Trading, designed to test participants' ability to develop algorithmic trading strategies in competitive market conditions.</p>
+                            <h4 class="achievement-subtitle">Team Accomplishments</h4>
+                            <ul class="achievement-points">
+                                <li>Achieved top 200 ranking among 600+ teams worldwide (12,000+ total participants)</li>
+                                <li>Developed and implemented profitable trading algorithms under time pressure</li>
+                                <li>Successfully adapted strategies to respond to changing market conditions</li>
+                                <li>Outperformed majority of competing teams in portfolio growth and risk management</li>
+                            </ul>
+                            <h4 class="achievement-subtitle">Technical Implementation</h4>
+                            <ul class="achievement-points">
+                                <li>Created Python-based algorithmic trading strategies for multiple asset classes</li>
+                                <li>Implemented statistical analysis to identify trading opportunities</li>
+                                <li>Developed risk management protocols to minimize downside exposure</li>
+                                <li>Utilized backtesting to validate and refine trading approaches</li>
+                            </ul>
+                            <h4 class="achievement-subtitle">Skills Applied</h4>
+                            <p>Algorithmic trading, Python programming, financial market analysis, statistical modeling, risk management, collaborative problem-solving, decision-making under pressure</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Economic Scholars Program (2024)</h3>
+                        <ul class="achievement-points">
+                            <li>Selected among 12-15 students for advanced economic research</li>
+                            <li>Studied digital currency models and payment systems</li>
+                            <li>Presented findings to faculty and industry professionals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications</h2>
+                <p class="section-subtitle">Professional qualifications and training</p>
+            </div>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-logo">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Data Analytics Basics</h3>
+                        <p class="certification-issuer">IBM, edX</p>
+                    </div>
+                </div>
+                <div class="certification-card">
+                    <div class="certification-logo">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Intro to Career Skills in Data Analytics</h3>
+                        <p class="certification-issuer">LinkedIn Learning</p>
+                    </div>
+                </div>
+                <div class="certification-card">
+                    <div class="certification-logo">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Data with Excel</h3>
+                        <p class="certification-issuer">IBM, edX</p>
+                    </div>
+                </div>
+                <div class="certification-card">
+                    <div class="certification-logo">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Programming with Arduino</h3>
+                        <p class="certification-issuer">Purdue University</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-subtitle">Get in touch with me</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:jhaverin@purdue.edu">jhaverin@purdue.edu</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+1 (765) 682-3797</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://www.linkedin.com/in/nityajhaveri" target="_blank">linkedin.com/in/nityajhaveri</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <p><a href="https://github.com/Nityaj22" target="_blank">github.com/Nityaj22</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                        <button type="submit" class="btn btn-primary btn-interactive">
+                            <span class="btn-text">Send Message</span>
+                            <div class="btn-hover-content">
+                                <span>Send Message</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </button>
+                        <div id="form-status" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">NJ</div>
+                <div class="footer-social">
+                    <a href="mailto:jhaverin@purdue.edu" class="social-link"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/nityajhaveri" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Nityaj22" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Nitya Jhaveri. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/projects.js"></script>
+    <script>
+        (function() {
+            const contactForm = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value;
+                    
+                    // Create mailto link
+                    const mailtoLink = `mailto:jhaverin@purdue.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message)}`;
+                    
+                    // Open email client
+                    window.location.href = mailtoLink;
+                    
+                    // Show success message
+                    formStatus.textContent = 'Opening your email client...';
+                    formStatus.className = 'form-status success';
+                    
+                    // Reset form after a moment
+                    setTimeout(function() {
+                        contactForm.reset();
+                        formStatus.textContent = '';
+                        formStatus.className = 'form-status';
+                    }, 2000);
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
+
