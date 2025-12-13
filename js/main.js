@@ -519,6 +519,53 @@ const projectData = {
                 </ul>
             </div>
         `
+    },
+    'f1-race-replay': {
+        title: 'F1 Race Replay Visualization',
+        category: 'Data Science',
+        tags: ['Python', 'FastF1 API', 'Arcade', 'NumPy', 'Multiprocessing'],
+        github: '',
+        content: `
+            <div class="modal-section">
+                <h4 class="modal-subtitle">What It Does</h4>
+                <p>Transforms raw F1 telemetry into interactive race replays where you can pause, rewind, and analyze every strategic decision. Click any driver to see their speed, gear, DRS status, and tire compound in real-time. The qualifying mode provides deep-dive lap analysis with throttle input, braking zones, and speed profiles mapped against circuit layout.</p>
+            </div>
+            <div class="modal-section">
+                <h4 class="modal-subtitle">Technical Highlights</h4>
+                <ul class="modal-list">
+                    <li><strong>Multi-threaded Data Pipeline:</strong> Implemented Python multiprocessing to process 20+ drivers simultaneously, reducing computation time by 80%. Smart caching with pickle serialization enables instant replay loading.</li>
+                    <li><strong>Frame-by-Frame Reconstruction:</strong> Built resampling engine interpolating irregular telemetry data onto unified 25 FPS timeline, handling pit stops, retirements, and data gaps for smooth playback.</li>
+                    <li><strong>Dynamic Visualization:</strong> Created scalable rendering system using Arcade that adapts track layout to any window size. Circuit auto-rotates to optimal viewing angles with responsive UI repositioning.</li>
+                    <li><strong>Qualifying Telemetry Charts:</strong> Developed synchronized multi-chart system showing speed traces, gear progression, and throttle/brake application—all linked to track position with background threading for seamless driver switching.</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h4 class="modal-subtitle">Key Features</h4>
+                <ul class="modal-list">
+                    <li>Live leaderboard with position tracking via along-track distance projection</li>
+                    <li>Track status visualization (green flag, yellow, safety car, VSC, red flag)</li>
+                    <li>Weather integration: track temp, humidity, wind direction, rainfall</li>
+                    <li>Interactive controls: pause, rewind, fast-forward, adjustable speed (0.5x–4x)</li>
+                    <li>Qualifying analysis: session-by-session lap times with detailed telemetry breakdowns</li>
+                    <li>Automatic data caching and support for Sprint races and qualifying sessions</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h4 class="modal-subtitle">Technical Implementation</h4>
+                <ul class="modal-list">
+                    <li>Leverages FastF1 API for real-time telemetry data extraction</li>
+                    <li>Python multiprocessing for parallel data processing across multiple drivers</li>
+                    <li>NumPy for efficient numerical operations and data interpolation</li>
+                    <li>Arcade game engine for smooth, interactive visualization rendering</li>
+                    <li>Pickle serialization for intelligent data caching and instant replay loading</li>
+                    <li>Advanced resampling algorithms to handle irregular telemetry timestamps</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h4 class="modal-subtitle">Performance & Impact</h4>
+                <p>This system provides Formula 1 enthusiasts and analysts with an unprecedented level of race analysis capability. The multi-threaded architecture ensures smooth performance even when processing complex race data, while the interactive controls make it easy to analyze specific moments in detail. The qualifying mode offers deep insights into driver performance and car setup through synchronized telemetry visualization.</p>
+            </div>
+        `
     }
 };
 
@@ -686,9 +733,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const projectTitle = btn.closest('.project-card').querySelector('.project-title').textContent;
             let projectId = '';
             
-            // Find project ID based on title
-            if (projectTitle.includes('F1 Undercut')) {
+            // Find project ID based on title or data-project attribute
+            const projectCard = btn.closest('.project-card');
+            if (projectCard.hasAttribute('data-project')) {
+                projectId = projectCard.getAttribute('data-project');
+            } else if (projectTitle.includes('F1 Undercut')) {
                 projectId = 'f1-undercut';
+            } else if (projectTitle.includes('F1 Race Replay')) {
+                projectId = 'f1-race-replay';
             } else if (projectTitle.includes('Monte Carlo')) {
                 projectId = 'monte-carlo';
             } else if (projectTitle.includes('Unix Shell')) {
