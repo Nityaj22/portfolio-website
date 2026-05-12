@@ -263,6 +263,65 @@ const experienceData = {
 
 // Project Data
 const projectData = {
+    'macro-regime': {
+        title: 'Macro Regime Dashboard',
+        category: 'Data Science / Finance',
+        tags: ['Python', 'GMM', 'scikit-learn', 'FRED API', 'yfinance', 'pandas', 'matplotlib', 'seaborn'],
+        github: 'https://github.com/Nityaj22/AI_ML_Projects/tree/main/Macro_Regime',
+        content: `
+            <div class="modal-section">
+                <h4 class="modal-subtitle">Project Overview</h4>
+                <p>Built a full macroeconomic regime classification pipeline that identifies which of four economic environments — Expansion, Slowdown, Stagflation, or Recession — the economy is in at any given time. Uses real Federal Reserve data (FRED API) across 352 months from 1996 to 2026, with a live dashboard showing the current regime and probability breakdown.</p>
+            </div>
+            <div class="modal-section">
+                <h4 class="modal-subtitle">Key Features</h4>
+                <ul class="modal-list">
+                    <li>Automated data pipeline pulling 5 macro indicators from FRED API and 10 equity ETFs from yfinance</li>
+                    <li>Feature engineering: CPI and INDPRO transformed to YoY growth rates, unemployment to MoM change, all standardized</li>
+                    <li>BIC score analysis to determine optimal number of regimes (tested 2–7 components)</li>
+                    <li>GMM with full covariance matrices assigns soft probabilities to each month rather than hard labels</li>
+                    <li>Regime timeline chart spanning 30 years with color-coded regime periods</li>
+                    <li>Feature heatmap showing what makes each regime economically distinct</li>
+                    <li>Sector rotation analysis: average monthly returns per ETF broken down by regime</li>
+                    <li>Live dashboard: current regime, probability breakdown, and all 5 macro indicators</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h4 class="modal-subtitle">Regime Timeline 1996–2026</h4>
+                <img src="https://raw.githubusercontent.com/Nityaj22/AI_ML_Projects/main/Macro_Regime/outputs/charts/regime_timeline.png" alt="Regime Timeline" style="width:100%;border-radius:8px;margin:8px 0;">
+                <p style="font-size:0.82rem;color:var(--text-muted);margin-top:4px;">Green = expansion, orange = slowdown, purple = stagflation, red = recession</p>
+            </div>
+            <div class="modal-section">
+                <h4 class="modal-subtitle">Technical Implementation</h4>
+                <ul class="modal-list">
+                    <li>Gaussian Mixture Model (<code>sklearn.mixture.GaussianMixture</code>) with full covariance, n_init=10 for stability</li>
+                    <li>5 features: yield curve spread (T10Y2Y), CPI YoY, unemployment MoM change, INDPRO YoY, high yield credit spread</li>
+                    <li>4 regimes identified: Expansion (43%), Slowdown (44%), Stagflation (7%), Recession (6%)</li>
+                    <li>StandardScaler normalization before modeling, unscaled values retained for interpretability</li>
+                    <li>Data: FRED API + yfinance, 1996–2026, monthly frequency</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h4 class="modal-subtitle">Feature Heatmap</h4>
+                <img src="https://raw.githubusercontent.com/Nityaj22/AI_ML_Projects/main/Macro_Regime/outputs/charts/regime_heatmap.png" alt="Feature Heatmap" style="width:100%;border-radius:8px;margin:8px 0;">
+                <p style="font-size:0.82rem;color:var(--text-muted);margin-top:4px;">Average macro indicator values per regime — color = relative intensity</p>
+            </div>
+            <div class="modal-section">
+                <h4 class="modal-subtitle">Sector Rotation Analysis</h4>
+                <img src="https://raw.githubusercontent.com/Nityaj22/AI_ML_Projects/main/Macro_Regime/outputs/charts/sector_returns.png" alt="Sector Returns by Regime" style="width:100%;border-radius:8px;margin:8px 0;">
+                <p style="font-size:0.82rem;color:var(--text-muted);margin-top:4px;">Average monthly sector returns by regime — XLE dominates stagflation, XLF/XLE crushed in recession</p>
+            </div>
+            <div class="modal-section">
+                <h4 class="modal-subtitle">Results & Impact</h4>
+                <ul class="modal-list">
+                    <li>Model correctly identifies 2008 financial crisis, 2020 COVID crash, and 2022 stagflation period</li>
+                    <li>Stagflation regime: XLE (energy) returns +2.1%/month, XLF and XLY negative — matches economic theory</li>
+                    <li>Current regime (March 2026): Slowdown at 98.8% confidence</li>
+                    <li>Designed for Phase 2 extension: Hidden Markov Models + FOMC NLP sentiment analysis</li>
+                </ul>
+            </div>
+        `
+    },
     'f1-undercut': {
         title: 'F1 Undercut Strategy Analysis',
         category: 'Data Science',
@@ -737,6 +796,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const projectCard = btn.closest('.project-card');
             if (projectCard.hasAttribute('data-project')) {
                 projectId = projectCard.getAttribute('data-project');
+            } else if (projectTitle.includes('Macro Regime')) {
+                projectId = 'macro-regime';
             } else if (projectTitle.includes('F1 Undercut')) {
                 projectId = 'f1-undercut';
             } else if (projectTitle.includes('F1 Race Replay')) {
