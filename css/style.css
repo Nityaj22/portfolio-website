@@ -1545,6 +1545,19 @@ p {
     transform: translateY(-3px);
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
+
+.skill-pill--highlight {
+    background-color: rgba(245, 158, 11, 0.12);
+    border-color: rgba(245, 158, 11, 0.5);
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.skill-pill--highlight:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    border-color: var(--accent-color);
+}
 /* Add to style.css */
 
 .form-status {
